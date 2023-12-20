@@ -1,0 +1,63 @@
+{
+    "buildType": {
+        "default": "profile",
+        "description": "Build Option",
+        "choices": {
+            "debug": {
+                "short": "debug",
+                "long": "debug",
+                "buildType": "debug"
+            },
+            "profile": {
+                "short": "profile",
+                "long": "profile",
+                "buildType": "profile"
+            },
+            "release": {
+                "short": "release",
+                "long": "release",
+                "buildType": "release"
+            }
+        }
+    },
+    "unity": {
+        "default": "unity",
+        "description": "Unity Build",
+        "choices": {
+            "unity": {
+                "short": "unity",
+                "long": "unity build enable",
+                "settings": {
+                    "LY_UNITY_BUILD": "ON"
+                }
+            },
+            "nounity": {
+                "short": "non-unity",
+                "long": "unity build disable",
+                "settings": {
+                    "LY_UNITY_BUILD": "OFF"
+                }
+            }
+        }
+    },
+    "monolithic": {
+        "default": "",
+        "description": "Monolithic Build",
+        "choices": {
+            "": {
+                "short": "non-monolithic",
+                "long": "non-monolithic build",
+                "settings": {
+                    "LY_MONOLITHIC_GAME": "OFF"
+                }
+            },
+            "monolithic": {
+                "short": "monolithic",
+                "long": "monolithic build",
+                "settings": {
+                    "LY_MONOLITHIC_GAME": "ON"
+                }
+            }
+        }
+    }
+}

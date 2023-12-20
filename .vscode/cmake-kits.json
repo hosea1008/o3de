@@ -1,0 +1,20 @@
+[
+    {
+        "name": "vs2019_x64",
+        "visualStudio": "ecfb11fc", //  get this from C:/Users/UserName/AppData/Local/CMakeTools/cmake-tools-kits.json
+        "visualStudioArchitecture": "x64",
+        "preferredGenerator": {
+            "name": "Visual Studio 16 2019",
+            "platform": "x64"
+        }
+    },
+    {
+        "name": "vs2022_x64",
+        "visualStudio": "dfff53b2",
+        "visualStudioArchitecture": "x64",
+        "preferredGenerator": {
+            "name": "Visual Studio 17 2022",
+            "platform": "x64"
+        }
+    }
+]

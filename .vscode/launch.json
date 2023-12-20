@@ -1,0 +1,54 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch cmake target",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [
+                "--project-path",
+                "${workspaceFolder}/AutomatedTesting",
+                // "--rhi=vulkan",
+                // "--rhi-device-validation=enable"
+                "--r_renderPipelinePath=passes/LowEndRenderPipeline.azasset"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH}:${command:cmake.getLaunchTargetDirectory}"
+                }
+            ],
+            "console": "internalConsole",
+            "logging": {
+                "exceptions": true,
+                "moduleLoad": true,
+                "programOutput": true,
+                "processExit": true,
+                "threadExit": true,
+                "engineLogging": false
+            }
+        },
+        {
+            "name": "Launch AzTestRunner",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${command:cmake.getLaunchTargetDirectory}/AzTestRunner.exe",
+            "args": [
+                "CommonFeaturesAtom.Editor.Tests.dll",
+                "AzRunUnitTests"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:PATH}:${command:cmake.getLaunchTargetDirectory}"
+                }
+            ],
+            "console": "internalConsole"
+        }
+    ]
+}

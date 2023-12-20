@@ -1,0 +1,20 @@
+{
+    "cmake.useCMakePresets": "never",
+    "cmake.buildDirectory": "${workspaceFolder}/build/${variant:monolithic}/${buildType}_${buildKit}_${variant:unity}",
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.configureSettings": {
+        "CMAKE_MESSAGE_LOG_LEVEL": "VERBOSE",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": 1,
+        "LY_PARALLEL_LINK_JOBS": 36,
+        "LY_PARALLEL_COMPILE_JOBS": 36,
+        "LY_3RDPARTY_PATH": "C:/WorkSpace/o3de_3rdParty",
+        "CMAKE_MAKE_PROGRAM": "C:/WorkSpace/lihongshan/ninja.exe",
+        "BUILD_TESTING": true,
+        "LY_DISABLE_TEST_MODULES": false
+    },
+    "cmake.configureArgs": [
+        "-DLY_PROJECTS=C:/WorkSpace/lihongshan/o3de/AutomatedTesting"
+    ],
+    "cmake.generator": "Ninja",
+    "cmake.configureOnOpen": false
+}
